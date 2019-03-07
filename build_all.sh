@@ -8,7 +8,7 @@ org_name="privacybydesign"
 image_names=(
   debian
   golang golang_dep
-  node yarn
+  node node_yarn
   android
 )
 
