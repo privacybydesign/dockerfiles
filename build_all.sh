@@ -8,8 +8,7 @@ org_name="privacybydesign"
 image_names=(
   debian
   golang golang_dep
-  node node_yarn
-  android
+  irma
 )
 
 for image_name in "${image_names[@]}"; do
