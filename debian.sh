@@ -7,6 +7,6 @@ apt-get install -y --no-install-recommends \
   curl \
   wget \
   xz-utils \
-  unzip
-
+  unzip \
+  git
 rm -rf /var/lib/apt/lists/*
