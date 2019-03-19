@@ -14,5 +14,5 @@ image_names=(
 )
 
 for image_name in "${image_names[@]}"; do
-  docker build -t "$org_name/$image_name" -f "$image_name.Dockerfile" .
+    ./build_one.sh "$image_name"
 done
