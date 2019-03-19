@@ -10,6 +10,7 @@ image_names=(
   golang golang_dep golang_dep_mobile
   node node_yarn
   java
+  buildah
   android
 )
 
