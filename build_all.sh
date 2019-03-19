@@ -9,7 +9,7 @@ image_names=(
   debian
   golang golang_dep golang_dep_mobile
   node node_yarn
-  java
+  jdk8
   buildah
   android
 )
