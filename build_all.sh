@@ -9,9 +9,7 @@ image_names=(
   debian
   golang golang_dep golang_dep_mobile
   node node_yarn
-  jdk8
-  buildah
-  android
+  ruby
 )
 
 for image_name in "${image_names[@]}"; do
