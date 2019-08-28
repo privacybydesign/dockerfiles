@@ -3,7 +3,7 @@ set -euxo pipefail
 
 # Adapted from: https://github.com/docker-library/golang/blob/2f6469ffe955721dd25e4cbb3013506659998aad/1.12/stretch/Dockerfile
 apt-get update
-apt-get install -y --no-install-recommends \
+DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
   ca-certificates \
   curl \
   g++ \
