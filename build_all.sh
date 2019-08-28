@@ -8,7 +8,7 @@ image_names=(
   golang golang_dep golang_dep_mobile
   node node_yarn
   ruby
-  android android_flutter
+  android android_golang_dep_mobile android_golang_dep_mobile_node_yarn android_golang_dep_mobile_flutter
 )
 
 for image_name in "${image_names[@]}"; do
