@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
-# Adapted from: https://github.com/docker-library/golang/blob/8f2f8502c173fbbcf33fcde5566ca53ad1070ae8/1.12/stretch/Dockerfile
+# Adapted from: https://github.com/docker-library/golang/blob/2f6469ffe955721dd25e4cbb3013506659998aad/1.12/stretch/Dockerfile
 apt-get update
 apt-get install -y --no-install-recommends \
   ca-certificates \
@@ -19,16 +19,16 @@ rm -rf /var/lib/apt/lists/*
 
 dpkgArch="$(dpkg --print-architecture)"; \
 case "${dpkgArch##*-}" in
-  amd64) goRelArch='linux-amd64'; goRelSha256='d7d1f1f88ddfe55840712dc1747f37a790cbcaa448f6c9cf51bbe10aa65442f5' ;;
-  armhf) goRelArch='linux-armv6l'; goRelSha256='c43457b6d89016e9b79b92823003fd7858fb02aea22b335cfd204e0b5be71d92' ;;
-  arm64) goRelArch='linux-arm64'; goRelSha256='b7d7b4319b2d86a2ed20cef3b47aa23f0c97612b469178deecd021610f6917df' ;;
-  i386) goRelArch='linux-386'; goRelSha256='eba5c51f657c1b05d5930475d1723758cd86db74499125ab48f0f9d1863845f7' ;;
-  ppc64el) goRelArch='linux-ppc64le'; goRelSha256='51642f3cd6ef9af6c4a092c2929e4fb478f102fe949921bd77ecd6905952c216' ;;
-  s390x) goRelArch='linux-s390x'; goRelSha256='0aab0f368c090da71f52531ebac977cc7396b692145acee557b3f9500b42467a' ;;
+  amd64) goRelArch='linux-amd64'; goRelSha256='ac2a6efcc1f5ec8bdc0db0a988bb1d301d64b6d61b7e8d9e42f662fbb75a2b9b' ;; \
+  armhf) goRelArch='linux-armv6l'; goRelSha256='0d9be0efa9cd296d6f8ab47de45356ba45cb82102bc5df2614f7af52e3fb5842' ;; \
+  arm64) goRelArch='linux-arm64'; goRelSha256='3606dc6ce8b4a5faad81d7365714a86b3162df041a32f44568418c9efbd7f646' ;; \
+  i386) goRelArch='linux-386'; goRelSha256='c40824a3e6c948b8ecad8fe9095b620c488b3d8d6694bdd48084a4798db4799a' ;; \
+  ppc64el) goRelArch='linux-ppc64le'; goRelSha256='2e74c071c6a68446c9b00c1717ceeb59a826025b9202b3b0efed4f128e868b30' ;; \
+  s390x) goRelArch='linux-s390x'; goRelSha256='2aac6de8e83b253b8413781a2f9a0733384d859cff1b89a2ad0d13814541c336' ;; \
   *) exit 1 ;;
 esac;
 
-wget -q -O go.tgz "https://dl.google.com/go/go1.12.4.${goRelArch}.tar.gz"
+wget -q -O go.tgz "https://dl.google.com/go/go1.12.9.${goRelArch}.tar.gz"
 echo "${goRelSha256} go.tgz" | sha256sum -c
 
 tar -C /usr/local -xzf go.tgz
