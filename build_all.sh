@@ -8,6 +8,7 @@ image_names=(
   golang golang_dep golang_dep_mobile
   node node_yarn
   ruby
+  jdk8
   android android_golang_dep_mobile android_golang_dep_mobile_node_yarn android_golang_dep_mobile_flutter
 )
 
