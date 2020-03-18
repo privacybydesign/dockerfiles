@@ -3,12 +3,6 @@ set -euxo pipefail
 
 apt-get update
 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-  ca-certificates \
-  curl \
-  wget \
-  xz-utils \
-  unzip \
-  git \
-  software-properties-common \
-  gnupg
+  openjdk-11-jdk-headless \
+  gradle
 rm -rf /var/lib/apt/lists/*

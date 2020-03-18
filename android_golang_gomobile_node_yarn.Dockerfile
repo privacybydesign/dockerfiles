@@ -1,4 +1,4 @@
-FROM privacybydesign/android_golang_dep_mobile:latest
+FROM privacybydesign/android_golang_gomobile:latest
 
 COPY node.sh /dockerfiles/
 RUN bash /dockerfiles/node.sh

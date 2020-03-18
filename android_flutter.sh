@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
-FLUTTER_VERSION=1.12.13+hotfix.5
-FLUTTER_CHECKSUM=d792c92895623da35e1a9ccd8bc2fe84c81dd72c2c54073f56fe70625866d800
+FLUTTER_VERSION=1.12.13+hotfix.8
+FLUTTER_CHECKSUM=cd10bf7410337da3faaa7d104313c920a6553c370f3c827531d78d3c59273306
 
 apt-get update
 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
