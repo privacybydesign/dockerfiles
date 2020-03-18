@@ -1,4 +1,4 @@
-FROM privacybydesign/android_golang_dep_mobile:latest
+FROM privacybydesign/android_golang_gomobile:latest
 
 ENV FLUTTER_HOME /opt/flutter
 ENV PATH ${PATH}:${FLUTTER_HOME}/bin

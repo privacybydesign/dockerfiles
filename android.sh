@@ -1,24 +1,18 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
-apt-get update
-DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-  default-jdk-headless
-rm -rf /var/lib/apt/lists/*
-
-# SDK
-wget -q -O sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
-echo "92ffee5a1d98d856634e8b71132e8a95d96c83a63fde1099be3d86df3106def9 sdk.zip" | sha256sum -c
+wget -q -O sdk.zip https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip
+echo "f10f9d5bca53cc27e2d210be2cbc7c0f1ee906ad9b868748d74d62e10f2c8275 sdk.zip" | sha256sum -c
 
 unzip -q sdk.zip -d "$ANDROID_HOME"
 rm sdk.zip
 
 # Packages
 set +o pipefail
-yes | sdkmanager --licenses
+yes | sdkmanager --sdk_root="$ANDROID_HOME" --licenses
 set -o pipefail
 
-sdkmanager \
+sdkmanager --sdk_root="$ANDROID_HOME" \
   "platform-tools" \
   "ndk-bundle" \
   "cmake;3.10.2.4988404" \

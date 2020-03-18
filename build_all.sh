@@ -5,13 +5,13 @@ set -euxo pipefail
 
 image_names=(
   debian
-  golang golang_dep golang_dep_mobile
+  golang
   node node_yarn
   ruby
   python3
-  jdk8
+  jdk11
   irma
-  android android_golang_dep_mobile android_golang_dep_mobile_node_yarn android_golang_dep_mobile_flutter
+  android android_golang_gomobile android_golang_gomobile_node_yarn android_golang_gomobile_flutter
 )
 
 for image_name in "${image_names[@]}"; do
