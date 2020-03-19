@@ -5,7 +5,7 @@ set -euxo pipefail
 
 image_names=(
   debian
-  golang
+  golang golang_flutter_hover
   node node_yarn
   ruby
   python3

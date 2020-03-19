@@ -1,0 +1,1 @@
+FROM privacybydesign/android_golang_gomobile_flutter:latest
