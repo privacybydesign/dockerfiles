@@ -11,7 +11,7 @@ image_names=(
   python3
   jdk11
   irma
-  android android_golang_gomobile android_golang_gomobile_node_yarn android_golang_gomobile_flutter
+  android android_golang android_golang_gomobile android_golang_gomobile_node_yarn android_golang_gomobile_flutter
 )
 
 for image_name in "${image_names[@]}"; do
