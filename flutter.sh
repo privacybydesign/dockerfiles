@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
-FLUTTER_VERSION=1.12.13+hotfix.8
-FLUTTER_CHECKSUM=cd10bf7410337da3faaa7d104313c920a6553c370f3c827531d78d3c59273306
+FLUTTER_VERSION=1.17.0-dev.3.1
+FLUTTER_CHANNEL=beta
+FLUTTER_CHECKSUM=16d996182bd4d182cf8d7e3f433a0ae9d0cd615e4fef6a11efa9281800538b13
 
 apt-get update
 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
   lib32stdc++6
 rm -rf /var/lib/apt/lists/*
 
-wget -q -O flutter.tar.xz https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v${FLUTTER_VERSION}-stable.tar.xz
-echo "${FLUTTER_CHECKSUM} *flutter.tar.xz" | sha256sum -c
+wget -q -O flutter.tar.xz https://storage.googleapis.com/flutter_infra/releases/${FLUTTER_CHANNEL}/linux/flutter_linux_${FLUTTER_VERSION}-${FLUTTER_CHANNEL}.tar.xz
+echo "${FLUTTER_CHECKSUM}  flutter.tar.xz" | sha256sum -c
 
 tar xf flutter.tar.xz
 rm flutter.tar.xz
