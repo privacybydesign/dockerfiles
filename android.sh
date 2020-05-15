@@ -16,7 +16,6 @@ sdkmanager --sdk_root="$ANDROID_HOME" \
   "platform-tools" \
   "ndk-bundle" \
   "cmake;3.10.2.4988404" \
-  "lldb;3.1" \
   "platforms;android-28" \
   "build-tools;28.0.3" \
   >/dev/null
