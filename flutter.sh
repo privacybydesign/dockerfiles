@@ -3,7 +3,7 @@ set -euxo pipefail
 
 FLUTTER_VERSION="1.22.4"
 FLUTTER_CHANNEL="stable"
-FLUTTER_CHECKSUM="fc23a4747a54d343147c75ee3b4ab2458ce15a4b743b8a246b0de796b67a546"
+FLUTTER_CHECKSUM="fc23a4747a54d343147c75ee3b4ab2458ce15a4b743b8a246b0de796b67a5461"
 
 apt-get update
 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
