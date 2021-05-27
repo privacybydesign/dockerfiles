@@ -14,7 +14,7 @@ set -o pipefail
 
 sdkmanager --sdk_root="$ANDROID_HOME" \
   "platform-tools" \
-  "ndk-bundle" \
+  "ndk;21.4.7075529" \
   "cmake;3.10.2.4988404" \
   "platforms;android-28" \
   "build-tools;28.0.3" \
