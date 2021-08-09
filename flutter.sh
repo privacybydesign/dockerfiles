@@ -18,6 +18,5 @@ rm flutter.tar.xz
 mv flutter ${FLUTTER_HOME}
 
 flutter config --no-analytics
-yes | flutter doctor --android-licenses
 flutter doctor -v
 flutter precache
