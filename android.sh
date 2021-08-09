@@ -22,5 +22,4 @@ sdkmanager --sdk_root="$ANDROID_HOME" \
   "platforms;android-29" \
   "platforms;android-30" \
   "build-tools;28.0.3" \
-  "build-tools;30.0.3" \
-  "cmdline-tools;3.0"
+  "build-tools;30.0.3"
