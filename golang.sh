@@ -17,8 +17,8 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
   wget
 rm -rf /var/lib/apt/lists/*
 
-wget -q -O go.tgz "https://golang.org/dl/go1.16.6.linux-amd64.tar.gz"
-echo "be333ef18b3016e9d7cb7b1ff1fdb0cac800ca0be4cf2290fe613b3d069dfe0d go.tgz" | sha256sum -c
+wget -q -O go.tgz "https://golang.org/dl/go$GO_VERSION.linux-amd64.tar.gz"
+echo "$GO_CHECKSUM go.tgz" | sha256sum -c
 
 tar -C /usr/local -xzf go.tgz
 rm go.tgz

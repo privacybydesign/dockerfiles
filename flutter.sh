@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
-FLUTTER_VERSION="2.2.3"
-FLUTTER_CHANNEL="stable"
-FLUTTER_CHECKSUM="66a271aa9f4286596841f5c89fd5d22e4ae0042127459e88d5650ca989ba948d"
-
 apt-get update
 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
   lib32stdc++6
