@@ -17,3 +17,6 @@ image_names=(
 for image_name in "${image_names[@]}"; do
     ./build_one.sh "$image_name"
 done
+
+# Remove all dangling images to save disk space.
+docker system prune -f
