@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# https://github.com/debuerreotype/docker-debian-artifacts/blob/18cb4d0418be1c80fb19141b69ac2e0600b2d601/buster/Dockerfile
-rootfs_url="https://github.com/debuerreotype/docker-debian-artifacts/raw/18cb4d0418be1c80fb19141b69ac2e0600b2d601/buster/rootfs.tar.xz"
-rootfs_sha256="e7d3a00b8dbf97e6dcb22b00ca9248cc2bf59d1a2107001a3ebf7cfb99542a1a"
+# https://github.com/debuerreotype/docker-debian-artifacts/blob/6032f248d825fd35e8b37037b26dc332e4659c64/bullseye/Dockerfile
+rootfs_url="https://github.com/debuerreotype/docker-debian-artifacts/blob/6032f248d825fd35e8b37037b26dc332e4659c64/bullseye/rootfs.tar.xz"
+rootfs_sha256="2451c7a42ef558a8717ba9586c6b8f62384f9e05a6d6645140f1d7f96ce27aa5"
 
 rootfs_path="${BASH_SOURCE%/*}/debian-rootfs.tar.xz"
 if [ ! -f "$rootfs_path" ]; then
