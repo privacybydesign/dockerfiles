@@ -5,11 +5,11 @@ set -euxo pipefail
 
 image_names=(
   debian
-  golang golang_flutter_hover
+  golang
   node node_yarn
   ruby
   python3
-  jdk11
+  jdk11 jdk17
   irma
   android android_golang android_golang_gomobile android_golang_gomobile_node_yarn android_golang_gomobile_flutter
 )
