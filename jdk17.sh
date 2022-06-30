@@ -11,10 +11,12 @@ rm -rf /var/lib/apt/lists/*
 curl -sLo/tmp/gradle.zip https://services.gradle.org/distributions/gradle-7.4.2-bin.zip
 unzip -d /opt/ /tmp/gradle.zip
 
-cat > /etc/profile.d/gradle.sh <<EOD
-if ! echo ${PATH} | grep -q gradle
-then
-   PATH=${PATH}:/opt/gradle-7.4.2/bin
-fi
-EOD
-chmod 755 /etc/profile.d/gradle.sh
+cd /opt/gradle-7.4.2/
+for dir in `ls | egrep '^bin$|^sbin$|^etc$|^include$|^lib$|^lib64$|^libexec$|^share$'`
+do
+    for target in `ls $dir`
+    do
+        test -d /usr/$dir || mkdir /usr/$dir
+        ln -fs `pwd`/$dir/$target /usr/$dir
+    done
+done
