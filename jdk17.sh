@@ -9,6 +9,7 @@ apt-get clean
 rm -rf /var/lib/apt/lists/*
 
 curl -sLo/tmp/gradle.zip https://services.gradle.org/distributions/gradle-7.4.2-bin.zip
+echo '29e49b10984e585d8118b7d0bc452f944e386458df27371b49b4ac1dec4b7fda /tmp/gradle.zip' | sha256sum -c
 unzip -d /opt/ /tmp/gradle.zip
 
 cd /opt/gradle-7.4.2/
