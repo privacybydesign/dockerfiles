@@ -11,6 +11,7 @@ image_names=(
   python3
   jdk11 jdk17
   irma
+  gcloud
   android android_golang android_golang_gomobile android_golang_gomobile_node_yarn android_golang_gomobile_flutter
 )
 
