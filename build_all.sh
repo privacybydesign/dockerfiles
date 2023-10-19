@@ -6,7 +6,7 @@ set -euxo pipefail
 image_names=(
   debian
   golang
-  node node_yarn
+  node node_yarn node_yarn_python3
   ruby
   python3
   jdk11 jdk17
